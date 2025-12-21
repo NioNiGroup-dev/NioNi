@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQPMGMT74L');
+
+  // Cette fonction va compter les clics sur l'APK
+  function trackDownload() {
+    gtag('event', 'telechargement_apk', {
+      'app_name': 'NioNi',
+      'file_name': 'app-debug.apk'
+    });
+  }
+</script>
+    
     <meta name="google-site-verification" content="ZA_l6WdemiD6qfchrry_YzJ_60WRa4yO3MVlJ91UcHk" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,7 +137,11 @@
 
 Que vous souhaitiez louer, construire ou rénover, <strong>NioNi</strong> centralise les ressources du marché pour sécuriser vos projets.</p>
         
-        <a href="https://github.com/NioNiGroup-dev/NioNi/raw/refs/heads/main/app-debug.apk" class="btn-download">TÉLÉCHARGER NioNi.apk</a>
+        <a href="https://github.com/NioNiGroup-dev/NioNi/raw/refs/heads/main/app-debug.apk"
+            onclick="trackDownload()"
+            class="btn-download">
+            TÉLÉCHARGER NioNi.apk
+        </a>
 
         <div class="info-section">
             <div class="step"><div class="step-number">1</div> Téléchargez l'APK officiel</div>
